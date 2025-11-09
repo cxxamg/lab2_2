@@ -1,0 +1,225 @@
+header {
+    color: #ffffff;                
+    font-family: Serif; 
+    font-size: 17px;                     
+    text-align: center;         
+    }
+
+    #left_column {
+    display: grid;
+    width: 65%;
+    min-width: 500px;
+    grid-template-columns: 1fr; /* один столбец */
+    grid-auto-flow: row; /* элементы располагаются в строки */
+    align-items: start; /* выравнивание по началу */
+    margin-left: 20px; /* Отступ слева для выравнивания */
+    margin-bottom: 20px; /* Отступ снизу для footer */
+}
+
+    /* Выравнивание таблиц в left_column по левому краю */
+    #left_column table {
+        margin: 20px 0; /* Убираем auto, оставляем только вертикальные отступы */
+    }
+
+    header::first-letter {
+        color: #0dc836 !important;        
+    }
+
+    header::first-letter {
+        color: #0d23c8;        
+    }
+    
+    select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+    body {
+    background: #092572 url('images/back.gif') center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 100px; /* Отступ снизу для footer */
+    }
+
+
+    .header-container{
+    background: linear-gradient(rgb(54, 2, 103),rgb(0, 42, 255, 0.01));
+    padding: 1px;
+    border-radius: 10px;
+    margin: 50px auto;
+
+    }
+    
+    .form-container{
+        box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.5);
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        background: inherit;
+        padding: 1px;
+        border-radius: inherit;
+        margin: auto 7%;
+        color:#ffffff;
+        width: 350px;
+        height: 500px;
+
+        
+    }
+
+    .img-container  {
+        box-shadow: -12px 12px 15px rgba(0, 0, 0, 0.5);
+        background: inherit;
+        padding: 1px;
+        border-radius: inherit;
+        margin: 20px 0%;
+        width: 500px;
+        height: 500px;
+        display: grid;
+        place-items: center center;
+
+    }
+
+    
+    .img-container canvas {
+        border-radius: 12px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-group{
+        margin: 20px auto;
+        font-size: 23px;  
+        font-weight: bold;
+
+        display: grid;
+        place-items: center;
+    }
+
+    .form-group input{
+        margin: 3%;
+        width: 300px;
+        height: 40px;
+        border-radius: 12px;
+        background: rgb(95, 94, 99);
+        font-size: 18px;
+        color:#ffffff;
+    }
+
+    .form-container button[type="submit"]{
+        margin: 10%;
+        width: 300px;
+        height: 40px;
+        border-radius: 12px;
+        background: linear-gradient(rgb(10, 255, 235),rgb(0, 42, 255));
+        color:#ffffff;
+        font-size: 18px;
+        font-weight: bold;
+
+        display: grid;
+        place-self: center;
+        place-items: center;
+    }
+
+    .grid-container{
+        background: linear-gradient(rgb(54, 2, 103),rgb(0, 42, 255, 0.01));
+        border-radius: 10px;
+
+
+       display: grid;
+        grid-template-columns: 1fr 1fr; /* две колонки */
+        gap: 20px;
+        justify-content: center;
+        align-items: start; /* выравнивание по верхнему краю */
+        margin: auto auto;
+        width: fit-content;
+    }
+
+    .grid-container-2 {
+    background: linear-gradient(rgb(54, 2, 103), rgba(0, 42, 255, 0.01));
+    border-radius: 10px;
+    display: grid;
+    gap: 20px;
+    position: absolute;
+    right: 20px; /* ПРИЖАТЬ К ПРАВОМУ КРАЮ */
+    top: 150px; /* ОПУСТИТЬ НИЖЕ */
+    width: fit-content;
+    padding: 0; /* Убираем padding, чтобы canvas был точно по размеру */
+}
+
+
+    
+    table, tr, th {
+    background: linear-gradient(rgb(54, 2, 103),rgb(0, 42, 255, 0.01));
+        padding: 1px;
+        border-radius: 10px;
+        margin: 20px auto;
+        color:#ffffff;
+        width: 650px;
+        height: 50px;
+        border: 1px solid;
+
+    }
+    td {
+        background: linear-gradient(rgb(182, 182, 182),rgba(244, 237, 237, 0.835));
+        color:#111111;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+
+    footer {
+    background: linear-gradient(rgb(2, 103, 52),rgb(0, 42, 255, 0.01));
+    display: grid;
+    place-items: center;
+    margin: 40px 20px; /* Выравниваем отступы */
+    color: #ffffff;
+    clear: both; /* Очищаем float */
+    width: calc(100% - 40px); /* Учитываем отступы */
+    box-sizing: border-box;
+}
+
+    .radio-group{
+        font-weight: bold;
+        font-size: 23px;
+        display: grid;
+        justify-items: center;
+    }
+
+    .radio-buttons{
+        display: grid;
+        grid-auto-flow: column;  
+        gap: 10px;
+
+    }
+
+
+    /* Стили для заголовков таблиц */
+    #result_header, #history_header {
+        background-color: #ffffff;
+        color: #000000;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-weight: bold;
+        margin: 15px 0;
+        text-align: start;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        display: inline-block; /* Обрамление только по тексту */
+        width: fit-content; /* Ширина по содержимому */
+    }
+    
+    /* Стили для навигационной ссылки */
+    #navigation {
+        margin: 15px 0;
+        background-color: #837d7dfb;
+        border-radius: 8px;
+        padding: 8px 16px;
+        width: fit-content;
+    }
+
+    #table_container {
+        margin: 15% 0;
+    }
+    
+    
