@@ -18,9 +18,14 @@ public class AreaCheckServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Result res = Script.run(request);
         if (res != null){
-            ResultHistory.getInstance().addResultToHistory(res);
             HttpSession session = request.getSession();
-            session.setAttribute("history", ResultHistory.getInstance().getHistory());
+            ResultHistory rHistory = (ResultHistory) session.getAttribute("rHistory");
+            if (rHistory == null){
+                rHistory = new ResultHistory();
+                session.setAttribute("rHistory", rHistory);
+            }
+            rHistory.addResultToHistory(res);
+            session.setAttribute("history", rHistory.getHistory());
             session.setAttribute("currentResult", res);
             request.getRequestDispatcher("/result.jsp").forward(request, response);
         } else {
