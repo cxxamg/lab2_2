@@ -1,11 +1,11 @@
 import { redraw, center, scale } from './canvas.js';
 import { getFormValues, validateValues } from "./Validation.js";
 
- // Инициализация canvas при загрузке страницы
+
  function initCanvasHandlers() {
     console.log('Initializing canvas handlers...');
     
-    // Рисуем график при загрузке
+
     if (typeof redraw === 'function') {
         console.log('Calling redraw()...');
         redraw();
@@ -14,7 +14,7 @@ import { getFormValues, validateValues } from "./Validation.js";
         console.error('redraw function is not available!');
     }
     
-    // Добавляем обработчик клика на canvas
+
     const canvas = document.getElementById('coordinate_plane');
     if (canvas) {
         console.log('Canvas element found, adding click handler');
@@ -23,24 +23,22 @@ import { getFormValues, validateValues } from "./Validation.js";
             const rect = canvas.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            
-            // Получаем текущий радиус из формы
+
             const radiusSelect = document.getElementById('radius');
             const r = parseFloat(radiusSelect.value);
             
             if (!isNaN(r) && r > 0) {
-                // Преобразуем координаты canvas в координаты графика
-                // x и y в canvas координатах относительно центра
+
                 const canvasX = x - center;
                 const canvasY = center - y; // инвертируем Y
                 
-                // Преобразуем в реальные координаты используя scale
+
                 const realX = (canvasX / (scale * r)) * r;
                 const realY = (canvasY / (scale * r)) * r;
                 
                 console.log('Calculated coordinates: x =', realX, 'y =', realY);
                 
-                // Заполняем форму
+
                 const xSelect = document.getElementById('xCanvas');
                 //const closestX = Math.round(realX);
                 xSelect.value = realX;

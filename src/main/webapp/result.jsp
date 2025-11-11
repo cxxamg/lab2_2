@@ -23,6 +23,7 @@
 
 </div>
 <%
+   session.setAttribute("path", "result");
    Result newResult = (Result) session.getAttribute("currentResult");
    List<Result> history = (List<Result>) session.getAttribute("history");
    Gson gson = new Gson();

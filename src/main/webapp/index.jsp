@@ -16,7 +16,7 @@
     </header>
 
 </div>
-
+<% session.setAttribute("path", "index"); %>
 <div class="grid-container">
     <div class="form-container">
         <form id="main_form" method="post" action="app">

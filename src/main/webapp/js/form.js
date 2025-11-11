@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const values = getFormValues(form);
 
         if (!validateValues(values)) {
+            console.log("Некорректные данные");
             event.preventDefault(); // Блокируем отправку формы, если данные некорректны
         }
     });
